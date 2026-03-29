@@ -4,7 +4,7 @@ import { setUsername, setFilter, loadRepos } from './github.actions';
 
 const Github = () => {
     const dispatch = useDispatch();
-    const { username, repos, filter } = useSelector(state => state);
+    const { username, repos, filter } = useSelector(state => state.github);
 
     const handleSearch = () => {
         dispatch(loadRepos(username));

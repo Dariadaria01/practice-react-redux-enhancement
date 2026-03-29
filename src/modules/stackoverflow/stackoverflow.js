@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setQuery, setSort, loadQuestions } from './stackoverflow.actions';
 const Stackoverflow = () => {
     const dispatch = useDispatch();
-    const { query, questions, sort } = useSelector(state => state);
+    const { query, questions, sort } = useSelector(
+      (state) => state.stackoverflow,
+    );
 
     const handleSearch = () => {
         dispatch(loadQuestions(query));
