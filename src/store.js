@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { githubReducer } from './modules/github';
+import { stackoverflowReducer } from './modules/stackoverflow'; 
 
 const store = createStore(
-    githubReducer,
+    stackoverflowReducer,
     applyMiddleware(thunk)
 );
 
